@@ -13,9 +13,9 @@ class ControllerLogin
 
         $this->_usersManager = new UsersManager;
 
-        $user = $this->_usersManager->getUser();
-
         if (isset($_POST['login'])) {
+            $user = $this->_usersManager->getUser();
+
             $user_connexion = $_POST['user_connexion'];
             $password_connexion = $_POST['password_connexion'];
 

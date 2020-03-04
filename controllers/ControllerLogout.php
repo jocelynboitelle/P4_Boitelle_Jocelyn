@@ -9,7 +9,7 @@ class ControllerLogout
 
     private function logout() {
 
-        if (isset($_POST['logout'])) {
+        if (isset($_POST['logout']) || isset($_GET['url']) == 'logout') {
             session_destroy();
             header('Location: login');
         }

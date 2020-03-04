@@ -6,22 +6,46 @@
 
 <h1>Articles</h1>
 
-<!-- 
-    Si je suis connecté:
-        -boutton create 
--->
+<?php if (isset($_SESSION['connected'])) { ?>
+
+    <a class="create" href="createArticle">
+        <button class="submit">Créer un article</button>
+    </a>
+
+<?php } ?>
 
 <?php foreach ($articles as $article): ?>
-    <a href="article&id=<?= $article->id() ?>">
 
-        <h2> <?= $article->title() ?> </h2>
-        <p> <?= $article->content() ?> </p>
-        <!-- 
-            Si je suis connecté:
-                -boutton update(id)
-                -boutton delete(id)
-        -->
-    </a>
+    <div class="article" onclick="location.href='article&id=<?= $id = $article->id(); ?>'">
+
+        <?php if (isset($_SESSION['connected'])) { ?>
+        
+        <div class="box">
+
+        <div class="content-article">
+            <h2> <?= $article->title(); ?> </h2>
+        </div>
+        
+        <div class="buttons">
+            <p> <?= substr($article->content(), 0, 100); ?>... </p>
+            <a class="edit" href="updateArticle&id=<?= $id ?>" title="éditer"><i class="fas fa-edit fa-lg"></i></a>
+            <a class="trash" href="deleteArticle&id=<?= $id ?>" title="supprimer"><i class="fas fa-trash fa-lg"></i></a>
+        </div>
+
+        </div>
+
+        <?php } else {?>
+
+        <div class="content-article">
+            <h2> <?= $article->title(); ?> </h2>
+            <p> <?= substr($article->content(), 0, 500); ?>...</p>
+            <h3>Lire la suite.</h3>
+        </div>
+
+        <?php } ?>
+
+    </div>
+
 <?php endforeach; ?>
 
 </div>

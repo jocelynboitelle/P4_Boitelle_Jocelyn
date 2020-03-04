@@ -20,7 +20,6 @@ class ControllerArticles
             $articles = $this->_articleManager->getArticlesAdmin();
         else
             $articles = $this->_articleManager->getArticles();
-    
         require_once('views/viewArticles.php');
     }
 }

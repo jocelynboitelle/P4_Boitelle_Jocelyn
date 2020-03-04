@@ -5,8 +5,12 @@ class ControllerArticle
     private $_articleManager;
     private $_commentsManager;
     public $message_comment;
+    public $typeAlert;
 
     public function __construct() {
+        $message_comment = NULL;
+        $typeAlert = NULL;
+
         if (isset($url) && $url && count($url) > 1)
             throw new Exception('Article Introuvable');
         else
@@ -21,11 +25,13 @@ class ControllerArticle
 
             if (isset($_POST['name_comment'])) {
                 $this->postComment($id_article);
+                $this->typeAlert = "success";
                 $this->message_comment = "Merci ! Votre commentaire a bien été posté.";
             }
 
             if (isset($_GET['report'])) {
                 $this->reportComment($_GET['report']);
+                $this->typeAlert = "success";
                 $this->message_comment = "Merci ! Le commentaire a bien été signalé.";
             }
 
