@@ -1,0 +1,50 @@
+/************** ALERT **************/
+
+.alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.message {
+    color: white;
+    font-weight: bold;
+}
+
+/************** TYPE **************/
+
+.success {
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66BB6A;
+}
+
+.warning {
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9800;
+}
+
+.danger {
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E64A19;
+}

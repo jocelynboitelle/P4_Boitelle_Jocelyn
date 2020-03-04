@@ -1,0 +1,93 @@
+@import url("./style.css");
+
+/************** ARTICLE **************/
+
+.content .article {
+    margin: 100px 0;
+    width: 1000px;
+    height: 100%;
+}
+
+/************** COMMENTS *************************************/
+
+.content .article .comments {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .article .comments .forms {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content .article .comments .forms .name {
+    border: 1px solid #beb9b9;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.content .article .comments .forms .text {
+    height: 100px;
+    border: 1px solid #beb9b9;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.content .article .comments .forms .submit {
+    width: 100px;
+    background-color: white;
+    border: 1px solid #c29932;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+    color: #c29932;
+    cursor: pointer;
+}
+
+.content .article .comments .forms .submit:hover {
+    background-color: #c29932;
+    color: white;
+    transition: 0.5s;
+}
+
+.content .article .comment {
+    border: 1px solid #beb9b9;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.content .article .comment .upper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content .article .comment .upper h3 {
+    margin: 5px 0;
+}
+
+.content .article .comment .lower {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .article .comment .lower .submit {
+    background-color: white;
+    border: 1px solid #c61919;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #c61919;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.content .article .comment .lower .submit:hover {
+    background-color: #c61919;
+    color: white;
+    transition: 0.5s;
+}
