@@ -1,71 +1,82 @@
 @import url("./style.css");
 
+.content {
+    background: url('../img/wolf.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
 /************** ARTICLES **************/
 
 .content .articles {
     width: 1000px;
-    margin: 100px 0;
-}
-
-.content .articles .article {
-    height: 100px;
+    min-height: 695px;
+    margin: 100px 0 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 50px 0;
-    cursor: pointer;
+    align-items: center;
 }
 
-.content .articles .box {
-    border: 1px solid #c29932;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.content .articles .box:hover {
+.content .articles h1 {
+    padding: 10px 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 0px 10px 0px #555454;
-    transition: 0.3s;
 }
 
-.content .articles .article .buttons {
+/************** ARTICLE ADMIN **************/
+
+.content .articles .article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 0px #555454;
+}
+
+.content .articles .article .id-article {
+    color: #555454;
+    font-size: 22px;
+}
+
+.content .articles .article .box {
+    height: 100px;
+    width: 92%;
+    padding: 10px;
+}
+
+.content .articles .article .lower {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.content .articles .article .buttons p {
-    width: 90%;
+.content .articles .article .lower .article-admin {
+    width: 70%;
+    text-align: left;
 }
 
-.fa-trash:hover {
-    color: #c61919;
+/************** ARTICLE **************/
+
+.content .articles .article .box-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px #555454;
+    padding: 15px;
 }
 
-.fa-edit:hover {
-    color: #2196f3;
+.content .articles .article .box-article .content-article {
+    width: 950px;
 }
 
-.content .articles .create {
+.content .articles .center {
     display: flex;
     justify-content: center;
-}
-
-.content .articles .create .submit {
-    background-color: white;
-    border: 1px solid #c29932;
-    border-radius: 4px;
-    margin: 15px;
-    padding: 8px;
-    font-size: 18px;
-    color: #c29932;
-    cursor: pointer;
-}
-
-.content .articles .create .submit:hover {
-    background-color: #c29932;
-    color: white;
-    box-shadow: 0px 0px 10px 0px #555454;
-    transition: 0.3s;
+    margin-top: 20px;
 }

@@ -1,0 +1,25 @@
+.buttons {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: #c61919;
+}
+
+.fa-edit:hover {
+    cursor: pointer;
+    color: #2196f3;
+}
+
+.fa-eye:hover {
+    cursor: pointer;
+    color: #c29932;
+}
+
+.fa-check:hover {
+    cursor: pointer;
+    color: green;
+}

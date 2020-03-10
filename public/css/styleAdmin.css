@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
 }
 
 .content .admin h1 {
@@ -30,15 +29,7 @@
     box-shadow: 0px 0px 15px 0px black;
 }
 
-.content .admin .forms .name {
-    border: 1px solid #beb9b9;
-    border-radius: 4px;
-    margin: 15px;
-    padding: 8px;
-    font-size: 18px;
-}
-
-.content .admin .forms .password {
+.content .admin .forms .input {
     border: 1px solid #beb9b9;
     border-radius: 4px;
     margin: 15px;
@@ -47,18 +38,5 @@
 }
 
 .content .admin .forms .submit {
-    background-color: white;
-    border: 1px solid #c29932;
-    border-radius: 4px;
     margin: 15px;
-    padding: 8px;
-    font-size: 18px;
-    color: #c29932;
-    cursor: pointer;
-}
-
-.content .admin .forms .submit:hover {
-    background-color: #c29932;
-    color: white;
-    transition: 0.5s;
 }

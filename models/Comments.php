@@ -32,7 +32,7 @@ class Comments
         }
     }
 
-    public function setIdArticle($id_article) {
+    public function setId_article($id_article) {
         $id_article = (int) $id_article;
 
         if ($id_article > 0) {
@@ -53,7 +53,7 @@ class Comments
     public function setReport($report) {
         $report = (int) $report;
 
-        if ($report == 0 || $report == 1)
+        if ($report >= 0)
         $this->_report = $report;
     }
 
@@ -69,7 +69,7 @@ class Comments
         return $this->_id;
     }
 
-    public function idArticle() {
+    public function id_article() {
         return $this->_id_article;
     }
 

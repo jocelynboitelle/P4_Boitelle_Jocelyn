@@ -3,9 +3,11 @@
 class Article
 {
     private $_id;
+    private $_id_article;
     private $_title;
     private $_content;
     private $_date;
+    private $_status;
 
     public function __construct(array $data) {
         $this->hydrate($data);
@@ -29,6 +31,14 @@ class Article
             $this->_id = $id;
         }
     }
+
+    public function setId_article($id_article) {
+        $id_article = (int) $id_article;
+
+        if ($id_article > 0) {
+            $this->_id_article = $id_article;
+        }
+    }
     
     public function setTitle($title) {
         if (is_string($title)) {
@@ -45,11 +55,19 @@ class Article
     public function setDate($date) {
         $this->_date = $date;
     }
+
+    public function setStatus($status) {
+        $this->_status = $status;
+    }
  
     // GETTERS
 
     public function id() {
         return $this->_id;
+    }
+    
+    public function id_article() {
+        return $this->_id_article;
     }
 
     public function title() {
@@ -62,5 +80,9 @@ class Article
 
     public function date() {
         return $this->_date;
+    }
+
+    public function status() {
+        return $this->_status;
     }
 }

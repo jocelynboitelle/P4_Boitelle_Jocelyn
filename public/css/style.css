@@ -1,4 +1,8 @@
 @import url('./alert.css');
+@import url('./submit.css');
+@import url('./topBar.css');
+@import url('./bottomBar.css');
+@import url('./buttons.css');
 
 @font-face {
     font-family: 'adam';
@@ -41,67 +45,6 @@ p, a {
     text-align: justify;
 }
 
-.element {
-    width: 100%;
-    height: 1px;
-    display: flex;
-    margin: 40px 0 20px;
-}
-.element .bar {
-    width: 100%;
-    background-color: #c29932;
-}
-
-/************** TOP-BAR **************/
-
-.top-bar {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    justify-items: center;
-    background-color: white;
-    box-shadow: 0px 0px 7px 0px #555454;
-}
-
-.top-bar .menu {
-    display: flex;
-    flex-direction: row;
-}
-
-.top-bar .menu li {
-    list-style: none;
-    padding: 12px;
-}
-
-.top-bar .menu li .auteur {
-    font-family: 'adam';
-    font-variant: small-caps;
-    text-align: center;
-    text-decoration: none;
-    color: #c29932;
-    font-size: 50px;
-}
-
-.top-bar .menu li .link {
-    font-family: 'adam';
-    padding: 10px 5px;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.top-bar .menu li .link:hover {
-    color: #c29932;
-    border-bottom: 1px solid #c29932;
-    transition: 0.2s;
-}
-
 /************** CONTENT **************/
 
 .content {
@@ -114,7 +57,6 @@ p, a {
 
 .content a,
 .content a:visited {
-    color: black;
     text-decoration: none;
 }
 
@@ -123,18 +65,4 @@ p, a {
 .content .forms {
     display: flex;
     flex-direction: column;
-}
-
-
-/************** BOTTOM-BAR **************/
-
-.bottom-bar {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-top: 1px solid #beb9b9;
 }

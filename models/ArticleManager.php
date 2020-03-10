@@ -50,4 +50,31 @@ class ArticleManager extends Model
         }
         return $article;
     }
+
+    public function updateArticle($id, $id_article, $title, $content, $status) {
+        $req = $this->db->prepare('UPDATE articles SET `id_article` = :id_article, `title` = :title, `content` = :content, `status` = :status WHERE id = :id');
+        $req->execute(array(
+            'id' => $id,
+            'id_article' => $id_article,
+            'title' => $title,
+            'content' => $content,
+            'status' => $status
+        ));
+    }
+
+    public function createArticle($id_article, $title, $content, $status) {
+        $req = $this->db->prepare('INSERT INTO `articles` (`id_article`, `title`, `content`, `status`) VALUES (:id_article, :title, :content, :status)');
+        $req->execute(array(
+            'id_article' => $id_article,
+            'title' => $title,
+            'content' => $content,
+            'status' => $status
+        ));
+    }
+
+    public function deleteArticle($id) 
+    {
+        $req = $this->db->prepare('DELETE FROM articles WHERE id = :id');
+        $req->execute(array('id' => $id));
+    }
 }

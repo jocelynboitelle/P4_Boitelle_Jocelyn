@@ -21,5 +21,12 @@
 }
 
 .content .bio {
-    height: 100vh;
+    height: 83vh;
+    width: 1000px;
+}
+
+.content .bio .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

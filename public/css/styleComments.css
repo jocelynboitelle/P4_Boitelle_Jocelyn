@@ -1,0 +1,66 @@
+@import url("./style.css");
+
+.content {
+    background: url('../img/wolf.jpg');
+    background-size: cover;
+    background-position: top;
+}
+
+/************** COMMENTS **************/
+
+.content .comments {
+    width: 1000px;
+    min-height: 695px;
+    margin: 100px 0 20px 0;
+}
+
+.content .comments h1 {
+    padding: 10px 0;
+    margin: 35px 0 123px 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 0px #555454;
+}
+
+
+.content .comments .comment {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.content .comments .comment .boxbad {
+    border: 1px solid #c61919;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 0px #555454;
+}
+
+.content .comments .comment .boxgood {
+    border: 1px solid #c29932;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px 0px #555454;
+}
+
+.content .comments .comment .section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .comments .comment .section .content-comment {
+    width: 50%;
+    height: auto;
+}
+
+.content .comments .comment .good {
+    font-weight: bold;
+    color: green;
+}
+
+.content .comments .comment .bad {
+    font-weight: bold;
+    color: #c61919;
+}
