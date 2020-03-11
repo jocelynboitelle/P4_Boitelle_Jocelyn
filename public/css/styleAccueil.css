@@ -21,7 +21,7 @@
 }
 
 .content .bio {
-    height: 83vh;
+    height: 92vh;
     width: 1000px;
 }
 
@@ -29,4 +29,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+@media (max-device-width: 768px) {
+
+    .content .header {
+        display: none;
+    }
+
+    .content .bio {
+        width: 90%;
+        height: 100%;
+        padding-top: 80px;
+    }
 }

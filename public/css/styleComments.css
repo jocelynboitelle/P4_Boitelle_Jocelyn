@@ -64,3 +64,21 @@
     font-weight: bold;
     color: #c61919;
 }
+
+@media (max-device-width: 768px) {
+
+    .content .comments {
+        width: 90%;
+        margin: 10px;
+        padding-top: 80px;
+    }
+
+    .content .comments h1 {
+        margin: 10px 0;
+    }
+
+    .content .comments .comment .section {
+        display: flex;
+        flex-direction: column;
+    }
+}

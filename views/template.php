@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jean Forteroche - <?= $title ?></title>
         <link href="../public/css/style<?= $style ?>.css" rel="stylesheet" />
         <script src="../public/js/function.js"></script>
@@ -10,17 +11,17 @@
         <script>tinymce.init({selector: '#tiny',height: "400", width: "100%"});</script>
     </head>
 
-    <nav class=top-bar>
-        <ul class="menu">
-            <li><a class="link" href="accueil">Accueil</a></li>
-            <li><a class="link" href="articles">Articles</a></li>
+    <nav id="top-bar">
+        <div class="menu">
+            <a class="link" href="accueil">Accueil</a>
+            <a class="link" href="articles">Articles</a>
             <?php if (isset($_SESSION['connected'])) { ?>
-            <li><a class="link" href="comments">Commentaires</a></li>
+            <a class="link" href="comments">Commentaires</a>
             <?php } ?>
-        </ul>
-        <ul class="menu">
-            <li><a class="auteur" href="login">Jean <strong class="auteur">Forteroche</strong></a></li>
-        </ul>
+            </div>
+        <div class="menu">
+            <a class="auteur" href="login">Jean <strong class="auteur">Forteroche</strong></a>
+        </div>
     </nav>
 
     <?php if (isset($this->message_comment) != NULL) { ?>

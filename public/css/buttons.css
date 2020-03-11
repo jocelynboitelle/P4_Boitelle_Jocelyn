@@ -1,6 +1,7 @@
 .buttons {
     width: 90px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -22,4 +23,11 @@
 .fa-check:hover {
     cursor: pointer;
     color: green;
+}
+
+@media (max-device-width: 768px) {
+    .buttons {
+        width: 60%;
+        margin-top: 10px;
+    }
 }

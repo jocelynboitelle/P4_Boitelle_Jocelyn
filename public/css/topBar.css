@@ -1,8 +1,7 @@
 /************** TOP-BAR **************/
 
-.top-bar {
+#top-bar {
     position: fixed;
-    z-index: 1;
     top: 0;
     width: 100%;
     height: 80px;
@@ -13,20 +12,16 @@
     justify-items: center;
     background-color: white;
     box-shadow: 0px 0px 7px 0px #555454;
+    transition: top 0.4s;
 }
 
-.top-bar .menu {
-    padding: 0;
+#top-bar .menu {
+    padding: 0 5px;
     display: flex;
     flex-direction: row;
 }
 
-.top-bar .menu li {
-    list-style: none;
-    padding: 12px;
-}
-
-.top-bar .menu li .auteur {
+#top-bar .menu .auteur {
     font-family: 'adam';
     font-variant: small-caps;
     text-align: center;
@@ -35,16 +30,28 @@
     font-size: 50px;
 }
 
-.top-bar .menu li .link {
+#top-bar .menu .link {
     font-family: 'adam';
-    padding: 10px 5px;
+    padding: 15px;
     text-decoration: none;
     font-size: 22px;
     font-weight: bold;
 }
 
-.top-bar .menu li .link:hover {
+#top-bar .menu .link:hover {
     color: #c29932;
     border-bottom: 1px solid #c29932;
     transition: 0.2s;
+}
+
+@media (max-device-width: 768px) {
+
+    #top-bar {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #top-bar .menu .auteur {
+        font-size: 25px;
+    }
 }

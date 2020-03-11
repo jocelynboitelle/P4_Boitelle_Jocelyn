@@ -112,3 +112,12 @@
     border-radius: 4px;
     padding: 5px;
 }
+
+@media (max-device-width: 768px) {
+
+    .content .article {
+        width: 90%;
+        height: 100%;
+        margin-top: 95px;
+    }
+}

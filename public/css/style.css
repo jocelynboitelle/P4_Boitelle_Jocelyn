@@ -66,3 +66,18 @@ p, a {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-device-width: 768px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .content {
+        height: 100%;
+    }
+}
