@@ -1,7 +1,5 @@
-@import url("./style.css");
-
 .content {
-    background: url('../img/wolf.jpg');
+    background: url('../img/lac.jpg');
     background-size: cover;
     background-position: top;
 }
@@ -21,7 +19,7 @@
     padding: 10px 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 10px 0px #555454;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);;
 }
 
 /************** ARTICLE ADMIN **************/
@@ -34,7 +32,12 @@
     align-items: center;
     margin: 10px 0;
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 10px 0px #555454;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);;
+}
+
+.content .articles .article:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    transition: 0.3s;
 }
 
 .content .articles .article .id-article {
@@ -65,17 +68,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 15px;
 }
 
+.content .articles .article .box-article h2 {
+    text-align: center;
+}
 .content .articles .center {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-@media (max-device-width: 768px) {
+@media (max-width: 1020px) {
 
     .content .articles {
         width: 90%;
@@ -83,6 +88,9 @@
         padding-top: 80px;
         margin: 0;
     }
+}
+
+@media (max-width: 767px) {
 
     .content .articles .article .id-article {
         display: none;

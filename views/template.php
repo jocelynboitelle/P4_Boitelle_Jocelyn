@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Jean Forteroche - <?= $title ?></title>
         <link href="../public/css/style<?= $style ?>.css" rel="stylesheet" />
+        <link href="../public/css/style.css" rel="stylesheet" />
+        <link href="../public/css/alert.css" rel="stylesheet" />
+        <link href="../public/css/submit.css" rel="stylesheet" />
+        <link href="../public/css/topBar.css" rel="stylesheet" />
+        <link href="../public/css/bottomBar.css" rel="stylesheet" />
+        <link href="../public/css/buttons.css" rel="stylesheet" />
         <script src="../public/js/function.js"></script>
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         <script src="https://cdn.tiny.cloud/1/ewzsiip33a1my2zwspbb5uuxo8dg1o815xvg6xd2ky41dyb2/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
@@ -20,7 +26,7 @@
             <?php } ?>
             </div>
         <div class="menu">
-            <a class="auteur" href="login">Jean <strong class="auteur">Forteroche</strong></a>
+            <a class="auteur" href="Admin">Jean <strong class="auteur">Forteroche</strong></a>
         </div>
     </nav>
 
@@ -40,6 +46,7 @@
     </div>
 
     <footer class="bottom-bar">
-        <p>créer par Jocelyn Boitelle</p>
+        <p>crée par Jocelyn Boitelle</p>
     </footer>
+
 </html>

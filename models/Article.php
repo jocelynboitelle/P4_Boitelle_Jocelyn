@@ -7,6 +7,7 @@ class Article
     private $_title;
     private $_content;
     private $_date;
+    private $_date_updated;
     private $_status;
 
     public function __construct(array $data) {
@@ -56,6 +57,10 @@ class Article
         $this->_date = $date;
     }
 
+    public function setDate_updated($date_updated) {
+        $this->_date_updated = $date_updated;
+    }
+
     public function setStatus($status) {
         $this->_status = $status;
     }
@@ -80,6 +85,10 @@ class Article
 
     public function date() {
         return $this->_date;
+    }
+
+    public function date_updated() {
+        return $this->_date_updated;
     }
 
     public function status() {

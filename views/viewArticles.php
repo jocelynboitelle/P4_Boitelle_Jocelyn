@@ -28,7 +28,7 @@
                 <h2> <?= $article->title(); ?> </h2>
             </div>
             <div class="lower">
-                <div class="article-admin"> <?= substr($article->content(), 0, 100); ?></div>
+                <div class="article-admin"> <?= substr($article->content(), 0, 200); ?>...</div>
                 <div class="buttons">
                     <a class="eye" href="article&id=<?= $id ?>" title="aperçu"><i class="fas fa-eye fa-lg"></i></a>
                     <a class="edit" href="articles&update=<?= $id ?>" title="éditer"><i class="fas fa-edit fa-lg"></i></a>

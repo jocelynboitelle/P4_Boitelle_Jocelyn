@@ -1,5 +1,3 @@
-@import url("./style.css");
-
 .content {
     background: url('../img/wolf.jpg');
     background-size: cover;
@@ -65,13 +63,16 @@
     color: #c61919;
 }
 
-@media (max-device-width: 768px) {
+@media (max-width: 1020px) {
 
     .content .comments {
         width: 90%;
         margin: 10px;
         padding-top: 80px;
     }
+}
+
+@media (max-width: 767px) {
 
     .content .comments h1 {
         margin: 10px 0;

@@ -54,6 +54,8 @@ class ControllerArticles
         $id_article = $article[0]->id_article();
         $title_article = $article[0]->title();
         $content_article = $article[0]->content();
+        $date_article = $article[0]->date();
+        $update_article = $article[0]->date_updated();
 
         if ($article[0]->status() == 1)
             $checked = "checked";

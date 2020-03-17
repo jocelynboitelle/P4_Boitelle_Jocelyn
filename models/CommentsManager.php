@@ -29,7 +29,7 @@ class CommentsManager extends Model
     }
 
     public function postComment($id_article, $name_comment, $post_comment) {
-        $req = $this->db->prepare('INSERT INTO comments (id, id_article, content, report, user) VALUES (NULL, :id_article, :post_comment, 0, :name_comment)');
+        $req = $this->db->prepare('INSERT INTO comments (id, id_article, content, report, user, date) VALUES (NULL, :id_article, :post_comment, 0, :name_comment, NOW())');
         $req->execute(array(
             'id_article' => $id_article,
             'name_comment' => $name_comment,

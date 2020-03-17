@@ -5,7 +5,7 @@
 
 <section class="article">
 
-    <?php if (isset($_GET['create'])) {?>
+    <?php if (isset($_GET['create'])) { ?>
 
     <form method="post" action="articles&save=0">
 
@@ -21,7 +21,16 @@
                 <input class="input" type="text" name="id_article" placeholder="numéro du chapitre" value="<?= $id_article ?>" required>
             </div>
             <div class="status">
-            </br><input type="checkbox" name="published" value="1" <?= $checked ?>>En ligne
+                </br>En ligne <input type="checkbox" name="published" value="1" <?= $checked ?>>
+
+                <?php if (isset($_GET['update'])) { ?>
+
+                </br>
+                <p>crée le: <?= $date_article ?></p>
+                <p>modifié le: <?= $update_article ?></p>
+
+                <?php } ?>
+
             </div>
         </div>
 
@@ -29,7 +38,7 @@
         <input id="title" class="input" type="text" name="title" value="<?= $title_article ?>">
 
         <label for="tiny"><h3>CONTENU DU CHAPITRE : </h3></label>
-        <textarea class="input" id="tiny" name="content"><?= $content_article; ?></textarea>
+        <textarea class="input" id="tiny" name="content"><?= $content_article ?></textarea>
 
         <input id="save-article" class="submit" type="submit" name="submit" value="Enregistrer">
         

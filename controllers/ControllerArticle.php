@@ -40,8 +40,8 @@ class ControllerArticle
     }
 
     private function postComment($id_article) {
-        $name_comment = $_POST['name_comment'];
-        $post_comment = $_POST['post_comment'];
+        $name_comment =  nl2br(htmlentities($_POST['name_comment']));
+        $post_comment =  nl2br(htmlentities($_POST['post_comment']));
 
         $this->_commentsManager->postComment($id_article, $name_comment, $post_comment);
     }

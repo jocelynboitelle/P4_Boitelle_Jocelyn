@@ -14,6 +14,18 @@
         <p>Iamque non umbratis fallaciis res agebatur, sed qua palatium est extra muros, armatis omne circumdedit. ingressusque obscuro iam die, ablatis regiis indumentis Caesarem tunica texit et paludamento communi, eum post haec nihil passurum velut mandato principis iurandi crebritate confirmans et statim inquit exsurge et inopinum carpento privato inpositum ad Histriam duxit prope oppidum Polam, ubi quondam peremptum Constantini filium accepimus Crispum.</p>
         <p>Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.</p>
     </div>
+    <section class="last-article">
+            <h2>Dernier Article</h2>
+            <div class="article">
+                <div class="content-article">
+                    <h2> <?= $article[0]->title(); ?> </h2>
+                    <div> <?= substr($article[0]->content(), 0, 500); ?></div>
+                </div>
+                <div class="center">
+                    <button class="submit" onclick="location.href='article&id=<?= $article[0]->id(); ?>'">Lire la suite</button>
+                </div>
+            </div>
+    </section>
 </section>
 
 <?php $content = ob_get_clean(); ?>
